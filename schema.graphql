@@ -1,0 +1,17 @@
+type Query {
+  books: [Book!]!
+  bookById(id: ID!): Book
+  oldBookSearch(query: String!): [Book!]! @deprecated(reason: "Use 'books' filter instead")
+}
+
+type Book {
+  id: ID!
+  title: String!
+  author: Author!
+  tags: [String!]!
+}
+
+type Author {
+  id: ID!
+  name: String!
+}

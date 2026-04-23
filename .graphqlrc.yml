@@ -1,0 +1,10 @@
+schema: "./schema.graphql"
+extensions:
+  graphql-markdown:
+    rootPath: "./content"
+    baseURL: "graphql"
+    linkRoot: "/"
+    mdxParser: "@graphql-markdown/formatters/hugo"
+    loaders:
+      GraphQLFileLoader: "@graphql-tools/graphql-file-loader"
+    pretty: true

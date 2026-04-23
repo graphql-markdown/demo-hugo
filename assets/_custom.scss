@@ -1,0 +1,40 @@
+// Custom styling for GraphQL Markdown Demo
+
+// You can override default variables here
+// See https://github.com/alex-shpak/hugo-book for available variables
+
+// Example: customize primary colors
+// $body-bg: #fafafa;
+// $body-font-color: #222;
+
+// Example: customize heading styles
+// h1 {
+//   color: #0066cc;
+//   font-weight: 700;
+// }
+
+// Example: enable plugins
+// Uncomment to enable:
+// @import "plugins/numbered";       // Numbered headings (1.1, 1.2, etc.)
+// @import "plugins/scrollbars";     // Custom scrollbar styles
+// @import "plugins/themes";         // Extra color themes
+
+.book-breadcrumbs {
+	margin: 0 0 1rem;
+	font-size: 0.85rem;
+}
+
+.book-breadcrumbs ol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.book-breadcrumbs li + li::before {
+	content: "/";
+	opacity: 0.6;
+	margin-right: 0.25rem;
+}

@@ -1,0 +1,22 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'GraphQL Markdown Demo'
+theme = 'book'
+
+[params]
+# Hugo Book theme settings
+BookTheme = 'auto'
+BookToC = true
+BookSearch = true
+BookComments = false
+BookLogo = 'logo.png'
+BookFavicon = 'favicon.png'
+# Render graphql section as menu, use * to render all sections
+BookSection = '*'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 3

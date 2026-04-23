@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Generated documentation
+content/graphql/
+
+# Hugo build output
+public/
+resources/_gen
+
+# Environment variables
+.env
+.env.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

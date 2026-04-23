@@ -1,0 +1,10 @@
+{{- if and (or .IsPage .IsSection) (gt (len .Ancestors) 0) -}}
+<nav class="book-breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    {{- range .Ancestors.Reverse -}}
+      <li><a href="{{ .RelPermalink }}">{{ partial "docs/title" . }}</a></li>
+    {{- end -}}
+    <li aria-current="page">{{ partial "docs/title" . }}</li>
+  </ol>
+</nav>
+{{- end -}}
