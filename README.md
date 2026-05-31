@@ -1,5 +1,9 @@
 # GraphQL-Markdown + Hugo demo
 
+This project demonstrates how to generate GraphQL documentation with GraphQL-Markdown for a [Hugo](https://gohugo.io/) site using the [Book theme](https://github.com/alex-shpak/hugo-book).
+
+**Live demo:** [graphql-markdown.dev/demo-hugo](https://graphql-markdown.dev/demo-hugo/)
+
 ## 🚀 Project Structure
 
 Inside your GraphQL-Markdown + [Hugo](https://gohugo.io/) project with the [Book theme](https://github.com/alex-shpak/hugo-book), you'll see:
