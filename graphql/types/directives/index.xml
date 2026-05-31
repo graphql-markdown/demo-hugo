@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Directives on GraphQL Markdown Demo</title>
+		<link>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/</link>
+		<description>Recent content in Directives on GraphQL Markdown Demo</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="https://graphql-markdown.dev/demo-hugo/graphql/types/directives/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>deprecated</title>
+				<link>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/deprecated/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/deprecated/</guid>
+				<description>&lt;h1 id=&#34;deprecated&#34;&gt;deprecated&lt;a class=&#34;anchor&#34; href=&#34;#deprecated&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Marks an element of a GraphQL schema as no longer supported.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-graphql&#34; data-lang=&#34;graphql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;directive&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;@deprecated&lt;/span&gt;(&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  reason: &lt;span style=&#34;color:#a6e22e&#34;&gt;String&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;No longer supported&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  | &lt;span style=&#34;color:#66d9ef&#34;&gt;ARGUMENT_DEFINITION&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  | &lt;span style=&#34;color:#66d9ef&#34;&gt;ENUM_VALUE&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  | &lt;span style=&#34;color:#66d9ef&#34;&gt;FIELD_DEFINITION&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  | &lt;span style=&#34;color:#66d9ef&#34;&gt;INPUT_FIELD_DEFINITION&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;arguments&#34;&gt;Arguments&lt;a class=&#34;anchor&#34; href=&#34;#arguments&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;h4 id=&#34;-scalar&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;gqlmd-mdx-entity&#34;&gt;&lt;code class=&#34;gqlmd-mdx-entity-parent&#34;&gt;deprecated&lt;/code&gt;.&lt;code class=&#34;gqlmd-mdx-entity-name&#34;&gt;reason&lt;/code&gt;&lt;/span&gt;&lt;/a&gt;&lt;span class=&#34;gqlmd-mdx-bullet&#34;&gt; ● &lt;/span&gt;&lt;a href=&#34;https://graphql-markdown.dev/demo-hugo/graphql/types/scalars/string&#34;&gt;&lt;span class=&#34;gqlmd-mdx-entity&#34;&gt;&lt;code class=&#34;gqlmd-mdx-entity-name&#34;&gt;String&lt;/code&gt;&lt;/span&gt;&lt;/a&gt; &lt;span class=&#34;gqlmd-badge&#34;&gt;scalar&lt;/span&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-scalar&#34;&gt;#&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;p&gt;Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by &lt;a href=&#34;https://commonmark.org/&#34;&gt;CommonMark&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>oneOf</title>
+				<link>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/one-of/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/one-of/</guid>
+				<description>&lt;h1 id=&#34;oneof&#34;&gt;oneOf&lt;a class=&#34;anchor&#34; href=&#34;#oneof&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Indicates exactly one field must be supplied and this field must not be &lt;code&gt;null&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-graphql&#34; data-lang=&#34;graphql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;directive&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;@oneOf&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INPUT_OBJECT&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+			</item>
+			<item>
+				<title>specifiedBy</title>
+				<link>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/specified-by/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/specified-by/</guid>
+				<description>&lt;h1 id=&#34;specifiedby&#34;&gt;specifiedBy&lt;a class=&#34;anchor&#34; href=&#34;#specifiedby&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Exposes a URL that specifies the behavior of this scalar.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-graphql&#34; data-lang=&#34;graphql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;directive&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;@specifiedBy&lt;/span&gt;(&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  url: &lt;span style=&#34;color:#a6e22e&#34;&gt;String&lt;/span&gt;!&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;SCALAR&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;arguments&#34;&gt;Arguments&lt;a class=&#34;anchor&#34; href=&#34;#arguments&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;h4 id=&#34;-non-null-scalar&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;gqlmd-mdx-entity&#34;&gt;&lt;code class=&#34;gqlmd-mdx-entity-parent&#34;&gt;specifiedBy&lt;/code&gt;.&lt;code class=&#34;gqlmd-mdx-entity-name&#34;&gt;url&lt;/code&gt;&lt;/span&gt;&lt;/a&gt;&lt;span class=&#34;gqlmd-mdx-bullet&#34;&gt; ● &lt;/span&gt;&lt;a href=&#34;https://graphql-markdown.dev/demo-hugo/graphql/types/scalars/string&#34;&gt;&lt;span class=&#34;gqlmd-mdx-entity&#34;&gt;&lt;code class=&#34;gqlmd-mdx-entity-name&#34;&gt;String!&lt;/code&gt;&lt;/span&gt;&lt;/a&gt; &lt;span class=&#34;gqlmd-badge&#34;&gt;non-null&lt;/span&gt; &lt;span class=&#34;gqlmd-badge&#34;&gt;scalar&lt;/span&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-non-null-scalar&#34;&gt;#&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;p&gt;The URL that specifies the behavior of this scalar.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

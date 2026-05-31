@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Country# No description
+type Country { awsRegion: String! capital: String code: ID! continent: Continent! currencies: [String!]! currency: String emoji: String! emojiU: String! languages: [Language!]! name( lang: String ): String! native: String! phone: String! phones: [String!]! states: [State!]! subdivisions: [Subdivision!]! }Fields# Country.awsRegion ● String! non-null scalar# Country.capital ● String scalar# Country.code ● ID! non-null scalar# Country.continent ● Continent! non-null object# Country.currencies ● [String!]! non-null scalar# Country.currency ● String scalar# Country.emoji ● String! non-null scalar# Country.emojiU ● String! non-null scalar# Country.languages ● [Language!]! non-null object# Country.name ● String! non-null scalar# Country.name.lang ● String scalar# Country.native ● String! non-null scalar# Country.phone ● String! non-null scalar# Country.phones ● [String!]! non-null scalar# Country.states ● [State!]! non-null object# Country.subdivisions ● [Subdivision!]! non-null object# Returned By# countries query ● country query
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://graphql-markdown.dev/demo-hugo/graphql/types/objects/country/">
+	<meta property="og:site_name" content="GraphQL Markdown Demo">
+	<meta property="og:title" content="Country">
+	<meta property="og:description" content="Country# No description
+type Country { awsRegion: String! capital: String code: ID! continent: Continent! currencies: [String!]! currency: String emoji: String! emojiU: String! languages: [Language!]! name( lang: String ): String! native: String! phone: String! phones: [String!]! states: [State!]! subdivisions: [Subdivision!]! }Fields# Country.awsRegion ● String! non-null scalar# Country.capital ● String scalar# Country.code ● ID! non-null scalar# Country.continent ● Continent! non-null object# Country.currencies ● [String!]! non-null scalar# Country.currency ● String scalar# Country.emoji ● String! non-null scalar# Country.emojiU ● String! non-null scalar# Country.languages ● [Language!]! non-null object# Country.name ● String! non-null scalar# Country.name.lang ● String scalar# Country.native ● String! non-null scalar# Country.phone ● String! non-null scalar# Country.phones ● [String!]! non-null scalar# Country.states ● [State!]! non-null object# Country.subdivisions ● [Subdivision!]! non-null object# Returned By# countries query ● country query">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="graphql">
+
+
+	<meta itemprop="name" content="Country">
+	<meta itemprop="description" content="Country# No description
+type Country { awsRegion: String! capital: String code: ID! continent: Continent! currencies: [String!]! currency: String emoji: String! emojiU: String! languages: [Language!]! name( lang: String ): String! native: String! phone: String! phones: [String!]! states: [State!]! subdivisions: [Subdivision!]! }Fields# Country.awsRegion ● String! non-null scalar# Country.capital ● String scalar# Country.code ● ID! non-null scalar# Country.continent ● Continent! non-null object# Country.currencies ● [String!]! non-null scalar# Country.currency ● String scalar# Country.emoji ● String! non-null scalar# Country.emojiU ● String! non-null scalar# Country.languages ● [Language!]! non-null object# Country.name ● String! non-null scalar# Country.name.lang ● String scalar# Country.native ● String! non-null scalar# Country.phone ● String! non-null scalar# Country.phones ● [String!]! non-null scalar# Country.states ● [State!]! non-null object# Country.subdivisions ● [Subdivision!]! non-null object# Returned By# countries query ● country query">
+	<meta itemprop="wordCount" content="134">
+
+<title>Country | GraphQL Markdown Demo</title>
+<link rel="icon" href="/demo-hugo/favicon.png" >
+<link rel="manifest" href="/demo-hugo/manifest.json">
+<link rel="canonical" href="https://graphql-markdown.dev/demo-hugo/graphql/types/objects/country/">
+<link rel="stylesheet" href="/demo-hugo/book.min.0cbafe1b4b30b62cd81eab03696c6ae1392738ae99ee9eeeba22260b628c1427.css" integrity="sha256-DLr&#43;G0swtizYHqsDaWxq4TknOK6Z7p7uuiImC2KMFCc=" crossorigin="anonymous">
+
+
+  <script defer src="/demo-hugo/fuse.min.js"></script>
+  <script defer src="/demo-hugo/en.search.min.a58c675a169592940493fabb61406bf5f9777a09f533201cf52027178a2eaf56.js" integrity="sha256-pYxnWhaVkpQEk/q7YUBr9fl3egn1MyAc9SAnF4our1Y=" crossorigin="anonymous"></script>
+
+
+
+  <link rel="stylesheet" href="/css/gqlmd-badges.css" />
+
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/demo-hugo/"><img src="/demo-hugo/logo.png" alt="Logo" /><span>GraphQL Markdown Demo</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/" class="">
+      GraphQL Documentation</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e64a13c9e758d69ee3e00271d228b1d" class="toggle"  />
+    <label for="section-6e64a13c9e758d69ee3e00271d228b1d" class="flex">
+      <a href="/demo-hugo/graphql/operations/" class="">
+        Operations</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a87831f3389b57368855f4f026fdcd0a" class="toggle"  />
+    <label for="section-a87831f3389b57368855f4f026fdcd0a" class="flex">
+      <a href="/demo-hugo/graphql/operations/directives/" class="">
+        Directives</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/directives/include/" class="">
+      include</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/directives/skip/" class="">
+      skip</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a8f0d558a0d7ecde498fb1c394d07c2" class="toggle"  />
+    <label for="section-5a8f0d558a0d7ecde498fb1c394d07c2" class="flex">
+      <a href="/demo-hugo/graphql/operations/queries/" class="">
+        Queries</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/continent/" class="">
+      continent</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/continents/" class="">
+      continents</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/countries/" class="">
+      countries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/country/" class="">
+      country</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/language/" class="">
+      language</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/languages/" class="">
+      languages</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2100008c5dc0025077d23553129869f3" class="toggle" checked />
+    <label for="section-2100008c5dc0025077d23553129869f3" class="flex">
+      <a href="/demo-hugo/graphql/types/" class="">
+        Types</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-097aa4f1928556195d97bf10cb8d758e" class="toggle"  />
+    <label for="section-097aa4f1928556195d97bf10cb8d758e" class="flex">
+      <a href="/demo-hugo/graphql/types/directives/" class="">
+        Directives</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/deprecated/" class="">
+      deprecated</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/one-of/" class="">
+      oneOf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/specified-by/" class="">
+      specifiedBy</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbfeed474d897ed8ef1c046f4de97eb2" class="toggle"  />
+    <label for="section-dbfeed474d897ed8ef1c046f4de97eb2" class="flex">
+      <a href="/demo-hugo/graphql/types/inputs/" class="">
+        Inputs</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/inputs/continent-filter-input/" class="">
+      ContinentFilterInput</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/inputs/country-filter-input/" class="">
+      CountryFilterInput</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/inputs/language-filter-input/" class="">
+      LanguageFilterInput</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/inputs/string-query-operator-input/" class="">
+      StringQueryOperatorInput</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-467422568f3d9893d12f176a5aefde7a" class="toggle" checked />
+    <label for="section-467422568f3d9893d12f176a5aefde7a" class="flex">
+      <a href="/demo-hugo/graphql/types/objects/" class="">
+        Objects</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/continent/" class="">
+      Continent</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/country/" class="active">
+      Country</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/language/" class="">
+      Language</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/state/" class="">
+      State</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/subdivision/" class="">
+      Subdivision</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7878634f884507a3539ac9e424ed27e3" class="toggle"  />
+    <label for="section-7878634f884507a3539ac9e424ed27e3" class="flex">
+      <a href="/demo-hugo/graphql/types/scalars/" class="">
+        Scalars</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/boolean/" class="">
+      Boolean</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/id/" class="">
+      ID</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/string/" class="">
+      String</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/demo-hugo/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Country</h3>
+
+  <label for="toc-control">
+    
+    <img src="/demo-hugo/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#country">Country</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#fields">Fields</a></li>
+            <li><a href="#returned-by">Returned By</a></li>
+            <li><a href="#member-of">Member Of</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      <nav class="book-breadcrumbs" aria-label="Breadcrumb">
+  <ol><li><a href="/demo-hugo/">GraphQL Documentation Demo</a></li><li><a href="/demo-hugo/graphql/">GraphQL Documentation</a></li><li><a href="/demo-hugo/graphql/types/">Types</a></li><li><a href="/demo-hugo/graphql/types/objects/">Objects</a></li><li aria-current="page">Country</li>
+  </ol>
+</nav>
+
+      
+  <article class="markdown book-article"><h1 id="country">Country<a class="anchor" href="#country">#</a></h1>
+<p>No description</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Country</span> {
+</span></span><span style="display:flex;"><span>  awsRegion: <span style="color:#a6e22e">String</span>!
+</span></span><span style="display:flex;"><span>  capital: <span style="color:#a6e22e">String</span>
+</span></span><span style="display:flex;"><span>  code: <span style="color:#a6e22e">ID</span>!
+</span></span><span style="display:flex;"><span>  continent: <span style="color:#a6e22e">Continent</span>!
+</span></span><span style="display:flex;"><span>  currencies: [String!]!
+</span></span><span style="display:flex;"><span>  currency: <span style="color:#a6e22e">String</span>
+</span></span><span style="display:flex;"><span>  emoji: <span style="color:#a6e22e">String</span>!
+</span></span><span style="display:flex;"><span>  emojiU: <span style="color:#a6e22e">String</span>!
+</span></span><span style="display:flex;"><span>  languages: [Language!]!
+</span></span><span style="display:flex;"><span>  name(
+</span></span><span style="display:flex;"><span>    lang: <span style="color:#a6e22e">String</span>
+</span></span><span style="display:flex;"><span>  ): <span style="color:#a6e22e">String</span>!
+</span></span><span style="display:flex;"><span>  native: <span style="color:#a6e22e">String</span>!
+</span></span><span style="display:flex;"><span>  phone: <span style="color:#a6e22e">String</span>!
+</span></span><span style="display:flex;"><span>  phones: [String!]!
+</span></span><span style="display:flex;"><span>  states: [State!]!
+</span></span><span style="display:flex;"><span>  subdivisions: [Subdivision!]!
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h3 id="fields">Fields<a class="anchor" href="#fields">#</a></h3>
+<h4 id="-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">awsRegion</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar">#</a></h4>
+<h4 id="-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">capital</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String</code></span></a> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-scalar">#</a></h4>
+<h4 id="-non-null-scalar-1"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">code</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/id"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-1">#</a></h4>
+<h4 id="-non-null-object"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">continent</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/objects/continent"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Continent!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">object</span><a class="anchor" href="#-non-null-object">#</a></h4>
+<h4 id="-non-null-scalar-2"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">currencies</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[String!]!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-2">#</a></h4>
+<h4 id="-scalar-1"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">currency</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String</code></span></a> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-scalar-1">#</a></h4>
+<h4 id="-non-null-scalar-3"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">emoji</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-3">#</a></h4>
+<h4 id="-non-null-scalar-4"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">emojiU</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-4">#</a></h4>
+<h4 id="-non-null-object-1"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">languages</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/objects/language"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[Language!]!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">object</span><a class="anchor" href="#-non-null-object-1">#</a></h4>
+<h4 id="-non-null-scalar-5"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">name</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-5">#</a></h4>
+<h5 id="-scalar-2"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country.name</code>.<code class="gqlmd-mdx-entity-name">lang</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String</code></span></a> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-scalar-2">#</a></h5>
+<h4 id="-non-null-scalar-6"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">native</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-6">#</a></h4>
+<h4 id="-non-null-scalar-7"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">phone</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-7">#</a></h4>
+<h4 id="-non-null-scalar-8"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">phones</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[String!]!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#-non-null-scalar-8">#</a></h4>
+<h4 id="-non-null-object-2"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">states</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/objects/state"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[State!]!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">object</span><a class="anchor" href="#-non-null-object-2">#</a></h4>
+<h4 id="-non-null-object-3"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Country</code>.<code class="gqlmd-mdx-entity-name">subdivisions</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/objects/subdivision"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[Subdivision!]!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">object</span><a class="anchor" href="#-non-null-object-3">#</a></h4>
+<h3 id="returned-by">Returned By<a class="anchor" href="#returned-by">#</a></h3>
+<p><a href="/graphql/operations/queries/countries"><code>countries</code></a>  <span class="gqlmd-badge">query</span><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/operations/queries/country"><code>country</code></a>  <span class="gqlmd-badge">query</span></p>
+<h3 id="member-of">Member Of<a class="anchor" href="#member-of">#</a></h3>
+<p><a href="/graphql/types/objects/continent"><code>Continent</code></a>  <span class="gqlmd-badge">object</span><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/objects/language"><code>Language</code></a>  <span class="gqlmd-badge">object</span><span class="gqlmd-mdx-bullet"> ● </span><a href="/graphql/types/objects/state"><code>State</code></a>  <span class="gqlmd-badge">object</span></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#country">Country</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#fields">Fields</a></li>
+            <li><a href="#returned-by">Returned By</a></li>
+            <li><a href="#member-of">Member Of</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
