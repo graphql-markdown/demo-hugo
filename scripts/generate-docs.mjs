@@ -14,7 +14,7 @@ await runGraphQLMarkdown(
     baseURL: "graphql",
     linkRoot: "/",
     homepage: "./_index.md",
-    mdxParser: customMDX,
+    formatter: customMDX,
     loaders: {
       UrlLoader: "@graphql-tools/url-loader",
     },
