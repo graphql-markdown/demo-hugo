@@ -12,7 +12,7 @@ await runGraphQLMarkdown(
     schema: "https://countries.trevorblades.com/graphql",
     rootPath: "./content",
     baseURL: "graphql",
-    linkRoot: "/",
+    linkRoot: "/demo-hugo",
     homepage: "./_index.md",
     formatter: customMDX,
     loaders: {
