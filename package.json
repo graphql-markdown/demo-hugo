@@ -9,12 +9,12 @@
     "build": "npm run generate && hugo"
   },
   "dependencies": {
-    "@graphql-markdown/cli": "^1.0.1",
-    "@graphql-markdown/formatters": "^1.0.1",
-    "@graphql-markdown/utils": "^1.12.1",
-    "@graphql-tools/graphql-file-loader": "^8.1.13",
-    "@graphql-tools/url-loader": "^9.0.4",
+    "@graphql-markdown/cli": "^1.1.0",
+    "@graphql-markdown/formatters": "^1.1.1",
+    "@graphql-markdown/utils": "^1.13.1",
+    "@graphql-tools/graphql-file-loader": "^8.1.20",
+    "@graphql-tools/url-loader": "^9.1.10",
     "glob": "^13.0.6",
-    "graphql": "^16.13.2"
+    "graphql": "^17.0.2"
   }
 }

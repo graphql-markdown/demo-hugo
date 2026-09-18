@@ -4,7 +4,7 @@ extensions:
     rootPath: "./content"
     baseURL: "graphql"
     linkRoot: "/"
-    mdxParser: "@graphql-markdown/formatters/hugo"
+    formatter: "@graphql-markdown/formatters/hugo"
     loaders:
       GraphQLFileLoader: "@graphql-tools/graphql-file-loader"
     pretty: true
