@@ -9,7 +9,7 @@ https://github.com/alex-shpak/hugo-book
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="deprecated# Marks an element of a GraphQL schema as no longer supported.
-directive @deprecated( reason: String = &#34;No longer supported&#34; ) on | ARGUMENT_DEFINITION | ENUM_VALUE | FIELD_DEFINITION | INPUT_FIELD_DEFINITIONArguments# deprecated.reason ● String scalar# Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark.
+directive @deprecated( reason: String ) on | ARGUMENT_DEFINITION | ENUM_VALUE | FIELD_DEFINITION | INPUT_FIELD_DEFINITIONArguments# deprecated.reason ● String scalar# Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
@@ -17,7 +17,7 @@ directive @deprecated( reason: String = &#34;No longer supported&#34; ) on | ARG
 	<meta property="og:site_name" content="GraphQL Markdown Demo">
 	<meta property="og:title" content="deprecated">
 	<meta property="og:description" content="deprecated# Marks an element of a GraphQL schema as no longer supported.
-directive @deprecated( reason: String = &#34;No longer supported&#34; ) on | ARGUMENT_DEFINITION | ENUM_VALUE | FIELD_DEFINITION | INPUT_FIELD_DEFINITIONArguments# deprecated.reason ● String scalar# Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark.">
+directive @deprecated( reason: String ) on | ARGUMENT_DEFINITION | ENUM_VALUE | FIELD_DEFINITION | INPUT_FIELD_DEFINITIONArguments# deprecated.reason ● String scalar# Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark.">
 	<meta property="og:locale" content="en_us">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="graphql">
@@ -25,8 +25,8 @@ directive @deprecated( reason: String = &#34;No longer supported&#34; ) on | ARG
 
 	<meta itemprop="name" content="deprecated">
 	<meta itemprop="description" content="deprecated# Marks an element of a GraphQL schema as no longer supported.
-directive @deprecated( reason: String = &#34;No longer supported&#34; ) on | ARGUMENT_DEFINITION | ENUM_VALUE | FIELD_DEFINITION | INPUT_FIELD_DEFINITIONArguments# deprecated.reason ● String scalar# Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark.">
-	<meta itemprop="wordCount" content="61">
+directive @deprecated( reason: String ) on | ARGUMENT_DEFINITION | ENUM_VALUE | FIELD_DEFINITION | INPUT_FIELD_DEFINITIONArguments# deprecated.reason ● String scalar# Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark.">
+	<meta itemprop="wordCount" content="57">
 
 <title>deprecated | GraphQL Markdown Demo</title>
 <link rel="icon" href="/demo-hugo/favicon.png" >
@@ -36,7 +36,7 @@ directive @deprecated( reason: String = &#34;No longer supported&#34; ) on | ARG
 
 
   <script defer src="/demo-hugo/fuse.min.js"></script>
-  <script defer src="/demo-hugo/en.search.min.ce82660199a8194a4c87d71f8b33d2c53e54b7ca03e937640de5fd3f206e3082.js" integrity="sha256-zoJmAZmoGUpMh9cfizPSxT5Ut8oD6TdkDeX9PyBuMII=" crossorigin="anonymous"></script>
+  <script defer src="/demo-hugo/en.search.min.eef7c73d7f55cca309bd2c3ef9f4c32875c2cabb94dc173cf3cf816bf75a1d27.js" integrity="sha256-7vfHPX9VzKMJvSw&#43;&#43;fTDKHXCyruU3Bc888&#43;Ba/daHSc=" crossorigin="anonymous"></script>
 
 
 
@@ -689,7 +689,7 @@ directive @deprecated( reason: String = &#34;No longer supported&#34; ) on | ARG
   <article class="markdown book-article"><h1 id="deprecated">deprecated<a class="anchor" href="#deprecated">#</a></h1>
 <p>Marks an element of a GraphQL schema as no longer supported.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#66d9ef">directive</span> <span style="color:#a6e22e">@deprecated</span>(
-</span></span><span style="display:flex;"><span>  reason: <span style="color:#a6e22e">String</span> = <span style="color:#e6db74">&#34;No longer supported&#34;</span>
+</span></span><span style="display:flex;"><span>  reason: <span style="color:#a6e22e">String</span>
 </span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">on</span> 
 </span></span><span style="display:flex;"><span>  | <span style="color:#66d9ef">ARGUMENT_DEFINITION</span>
 </span></span><span style="display:flex;"><span>  | <span style="color:#66d9ef">ENUM_VALUE</span>
