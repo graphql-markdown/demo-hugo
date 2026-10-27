@@ -8,3 +8,4 @@ extensions:
     loaders:
       GraphQLFileLoader: "@graphql-tools/graphql-file-loader"
     pretty: true
+    telemetry: false
