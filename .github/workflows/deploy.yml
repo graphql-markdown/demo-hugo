@@ -26,8 +26,19 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3.2.1
         with:
-          hugo-version: "latest"
+          # Pinned: an unannounced Hugo release can break the theme build.
+          hugo-version: "0.170.0"
           extended: true
+
+      # Hugo 0.170 dropped the embedded LibSass, so the Hugo Book theme's
+      # css.Sass needs the Dart Sass binary on PATH.
+      - name: Install Dart Sass
+        env:
+          DART_SASS_VERSION: "1.108.2"
+        run: |
+          curl -fsSL "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" \
+            | tar xz -C "${RUNNER_TEMP}"
+          echo "${RUNNER_TEMP}/dart-sass" >> "${GITHUB_PATH}"
 
       - name: Install Node dependencies
         run: npm ci
