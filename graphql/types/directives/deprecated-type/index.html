@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="deprecatedType# Marks an object type as superseded when standard @deprecated cannot be applied.
+directive @deprecatedType( reason: String! ) on OBJECT Arguments# deprecatedType.reason ● String! non-null scalar#">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://graphql-markdown.dev/demo-hugo/graphql/types/directives/deprecated-type/">
+	<meta property="og:site_name" content="GraphQL Markdown Demo">
+	<meta property="og:title" content="deprecatedType">
+	<meta property="og:description" content="deprecatedType# Marks an object type as superseded when standard @deprecated cannot be applied.
+directive @deprecatedType( reason: String! ) on OBJECT Arguments# deprecatedType.reason ● String! non-null scalar#">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="graphql">
+
+
+	<meta itemprop="name" content="deprecatedType">
+	<meta itemprop="description" content="deprecatedType# Marks an object type as superseded when standard @deprecated cannot be applied.
+directive @deprecatedType( reason: String! ) on OBJECT Arguments# deprecatedType.reason ● String! non-null scalar#">
+	<meta itemprop="wordCount" content="26">
+
+<title>deprecatedType | GraphQL Markdown Demo</title>
+<link rel="icon" href="/demo-hugo/favicon.png" >
+<link rel="manifest" href="/demo-hugo/manifest.json">
+<link rel="canonical" href="https://graphql-markdown.dev/demo-hugo/graphql/types/directives/deprecated-type/">
+<link rel="stylesheet" href="/demo-hugo/book.min.ffc70776190df4227bc8795efc72b912dc83c64632eaafc66f6e4f900f045359.css" integrity="sha256-/8cHdhkN9CJ7yHle/HK5EtyDxkYy6q/Gb25PkA8EU1k=" crossorigin="anonymous">
+
+
+  <script defer src="/demo-hugo/fuse.min.js"></script>
+  <script defer src="/demo-hugo/en.search.min.5bec1d3ebee3046d359a30c7f4d75031b8652dbb6fb73af52aa0bbf203022141.js" integrity="sha256-W&#43;wdPr7jBG01mjDH9NdQMbhlLbtvtzr1KqC78gMCIUE=" crossorigin="anonymous"></script>
+
+
+
+  <link rel="stylesheet" href="/css/gqlmd-badges.css" />
+
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/demo-hugo/"><img src="/demo-hugo/logo.png" alt="Logo" /><span>GraphQL Markdown Demo</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/" class="">
+      GraphQL Documentation</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e64a13c9e758d69ee3e00271d228b1d" class="toggle"  />
+    <label for="section-6e64a13c9e758d69ee3e00271d228b1d" class="flex">
+      <a href="/demo-hugo/graphql/operations/" class="">
+        Operations</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a87831f3389b57368855f4f026fdcd0a" class="toggle"  />
+    <label for="section-a87831f3389b57368855f4f026fdcd0a" class="flex">
+      <a href="/demo-hugo/graphql/operations/directives/" class="">
+        Directives</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/directives/include/" class="">
+      include</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/directives/skip/" class="">
+      skip</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ad318bafc25d3263d2cf00a22b574a89" class="toggle"  />
+    <label for="section-ad318bafc25d3263d2cf00a22b574a89" class="flex">
+      <a href="/demo-hugo/graphql/operations/mutations/" class="">
+        Mutations</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/mutations/archive-project/" class="">
+      archiveProject</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/mutations/create-folder/" class="">
+      createFolder</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/mutations/create-project/" class="">
+      createProject</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a8f0d558a0d7ecde498fb1c394d07c2" class="toggle"  />
+    <label for="section-5a8f0d558a0d7ecde498fb1c394d07c2" class="flex">
+      <a href="/demo-hugo/graphql/operations/queries/" class="">
+        Queries</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/folder/" class="">
+      folder</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/folders/" class="">
+      folders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/projects/" class="">
+      projects</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/queries/search/" class="">
+      search</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-702839e70e95b9d20fc2adb88a8bad66" class="toggle"  />
+    <label for="section-702839e70e95b9d20fc2adb88a8bad66" class="flex">
+      <a href="/demo-hugo/graphql/operations/subscriptions/" class="">
+        Subscriptions</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/subscriptions/folder-created/" class="">
+      folderCreated</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/operations/subscriptions/project-changed/" class="">
+      projectChanged</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2100008c5dc0025077d23553129869f3" class="toggle" checked />
+    <label for="section-2100008c5dc0025077d23553129869f3" class="flex">
+      <a href="/demo-hugo/graphql/types/" class="">
+        Types</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-097aa4f1928556195d97bf10cb8d758e" class="toggle" checked />
+    <label for="section-097aa4f1928556195d97bf10cb8d758e" class="flex">
+      <a href="/demo-hugo/graphql/types/directives/" class="">
+        Directives</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/deprecated/" class="">
+      deprecated</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/deprecated-type/" class="active">
+      deprecatedType</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/example/" class="">
+      example</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/example-response/" class="">
+      exampleResponse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/example-variables/" class="">
+      exampleVariables</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/one-of/" class="">
+      oneOf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/directives/specified-by/" class="">
+      specifiedBy</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-09985137b49072ec4da9475db68b2f66" class="toggle"  />
+    <label for="section-09985137b49072ec4da9475db68b2f66" class="flex">
+      <a href="/demo-hugo/graphql/types/enums/" class="">
+        Enums</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/enums/project-event-type/" class="">
+      ProjectEventType</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/enums/project-status/" class="">
+      ProjectStatus</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbfeed474d897ed8ef1c046f4de97eb2" class="toggle"  />
+    <label for="section-dbfeed474d897ed8ef1c046f4de97eb2" class="flex">
+      <a href="/demo-hugo/graphql/types/inputs/" class="">
+        Inputs</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/inputs/create-project-input/" class="">
+      CreateProjectInput</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-591d91b5637b82808033aab158692cdc" class="toggle"  />
+    <label for="section-591d91b5637b82808033aab158692cdc" class="flex">
+      <a href="/demo-hugo/graphql/types/interfaces/" class="">
+        Interfaces</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/interfaces/node/" class="">
+      Node</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-467422568f3d9893d12f176a5aefde7a" class="toggle"  />
+    <label for="section-467422568f3d9893d12f176a5aefde7a" class="flex">
+      <a href="/demo-hugo/graphql/types/objects/" class="">
+        Objects</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/folder/" class="">
+      Folder</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/legacy-project/" class="">
+      LegacyProject</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/project/" class="">
+      Project</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/project-connection/" class="">
+      ProjectConnection</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/project-event/" class="">
+      ProjectEvent</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/objects/user/" class="">
+      User</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7878634f884507a3539ac9e424ed27e3" class="toggle"  />
+    <label for="section-7878634f884507a3539ac9e424ed27e3" class="flex">
+      <a href="/demo-hugo/graphql/types/scalars/" class="">
+        Scalars</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/boolean/" class="">
+      Boolean</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/date-time/" class="">
+      DateTime</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/id/" class="">
+      ID</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/int/" class="">
+      Int</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/scalars/string/" class="">
+      String</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d9d0ce2d377c229e71e773ccd4f433b" class="toggle"  />
+    <label for="section-8d9d0ce2d377c229e71e773ccd4f433b" class="flex">
+      <a href="/demo-hugo/graphql/types/unions/" class="">
+        Unions</a>
+      <img src="/demo-hugo/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/demo-hugo/graphql/types/unions/search-result/" class="">
+      SearchResult</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/demo-hugo/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>deprecatedType</h3>
+
+  <label for="toc-control">
+    
+    <img src="/demo-hugo/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#deprecatedtype">deprecatedType</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#arguments">Arguments</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      <nav class="book-breadcrumbs" aria-label="Breadcrumb">
+  <ol><li><a href="/demo-hugo/">GraphQL Documentation Demo</a></li><li><a href="/demo-hugo/graphql/">GraphQL Documentation</a></li><li><a href="/demo-hugo/graphql/types/">Types</a></li><li><a href="/demo-hugo/graphql/types/directives/">Directives</a></li><li aria-current="page">deprecatedType</li>
+  </ol>
+</nav>
+
+      
+  <article class="markdown book-article"><h1 id="deprecatedtype">deprecatedType<a class="anchor" href="#deprecatedtype">#</a></h1>
+<p>Marks an object type as superseded when standard @deprecated cannot be applied.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#66d9ef">directive</span> <span style="color:#a6e22e">@deprecatedType</span>(
+</span></span><span style="display:flex;"><span>  reason: <span style="color:#a6e22e">String</span>!
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">OBJECT</span></span></span></code></pre></div><h3 id="arguments">Arguments<a class="anchor" href="#arguments">#</a></h3>
+<h4 id="deprecatedtypereasonstring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">deprecatedType</code>.<code class="gqlmd-mdx-entity-name">reason</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="/demo-hugo/graphql/types/scalars/string"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span><a class="anchor" href="#deprecatedtypereasonstring-non-null-scalar">#</a></h4>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+ 
+        
+  
+ 
+        <div class="gqlmd-footer">
+  Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a>
+  · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+</div>
+
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#deprecatedtype">deprecatedType</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#arguments">Arguments</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,31 +4,43 @@
   <url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/</loc>
   </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/mutations/archive-project/</loc>
+  </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/scalars/boolean/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/categories/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/continent/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/mutations/create-folder/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/continent/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/mutations/create-project/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/inputs/continent-filter-input/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/inputs/create-project-input/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/continents/</loc>
-  </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/countries/</loc>
-  </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/country/</loc>
-  </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/country/</loc>
-  </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/inputs/country-filter-input/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/scalars/date-time/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/deprecated/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/deprecated-type/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/directives/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/enums/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/example/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/example-response/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/example-variables/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/folder/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/folder/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/subscriptions/folder-created/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/folders/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/</loc>
   </url><url>
@@ -38,13 +50,15 @@
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/inputs/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/language/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/scalars/int/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/language/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/interfaces/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/inputs/language-filter-input/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/legacy-project/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/languages/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/mutations/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/interfaces/node/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/</loc>
   </url><url>
@@ -52,24 +66,42 @@
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/</loc>
   </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/project/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/subscriptions/project-changed/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/project-connection/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/project-event/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/enums/project-event-type/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/projects/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/enums/project-status/</loc>
+  </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/scalars/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/queries/search/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/unions/search-result/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/directives/skip/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/specified-by/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/state/</loc>
-  </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/scalars/string/</loc>
   </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/inputs/string-query-operator-input/</loc>
-  </url><url>
-    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/subdivision/</loc>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/operations/subscriptions/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/tags/</loc>
   </url><url>
     <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/unions/</loc>
+  </url><url>
+    <loc>https://graphql-markdown.dev/demo-hugo/graphql/types/objects/user/</loc>
   </url>
 </urlset>
