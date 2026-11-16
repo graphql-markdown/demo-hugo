@@ -9,7 +9,9 @@ const customMDX = pathToFileURL(
 
 await runGraphQLMarkdown(
   {
-    schema: "https://countries.trevorblades.com/graphql",
+    // Shared schema documented by every GraphQL-Markdown demo.
+    schema:
+      "https://raw.githubusercontent.com/graphql-markdown/graphql-markdown/main/tests/e2e/__data__/demo_schema.graphql",
     rootPath: "./content",
     baseURL: "graphql",
     linkRoot: "/demo-hugo",

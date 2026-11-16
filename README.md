@@ -25,10 +25,9 @@ Inside your GraphQL-Markdown + [Hugo](https://gohugo.io/) project with the [Book
 │       └── head.html            # Inject CSS for badges
 ├── themes/
 │   └── book/                    # Hugo Book theme (submodule)
-├── schema.graphql               # Sample GraphQL schema
-├── graphql.config.mjs           # GraphQL-Markdown configuration
 ├── scripts/
-│   └── custom-hugo-mdx.mjs      # Custom MDX formatter with lifecycle hooks
+│   ├── custom-hugo-mdx.mjs      # Custom MDX formatter with lifecycle hooks
+│   └── generate-docs.mjs        # GraphQL-Markdown configuration and runner
 ├── hugo.toml                    # Hugo site configuration
 └── package.json
 ```
@@ -64,7 +63,9 @@ npm run dev
 
 Open `http://localhost:1313/graphql/`.
 
-> 🧑‍🚀 Edit `schema.graphql` to use your own GraphQL schema.
+The demo documents the [shared GraphQL-Markdown demo schema](https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql), loaded from its raw URL.
+
+> 🧑‍🚀 Edit the `schema` option in `scripts/generate-docs.mjs` to use your own GraphQL schema.
 
 ## 📋 How it Works
 
