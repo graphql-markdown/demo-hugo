@@ -38,3 +38,15 @@
 	opacity: 0.6;
 	margin-right: 0.25rem;
 }
+
+// Keep the footer at the bottom of the viewport on short pages.
+.book-page {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	min-height: 100vh;
+}
+
+.book-footer {
+	margin-top: auto;
+}
