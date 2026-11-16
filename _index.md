@@ -34,9 +34,9 @@ The GraphQL-Markdown generation process uses three key components:
 
 ### Key Files
 
-- `.graphqlrc.yml` - GraphQL-Markdown configuration
+- `scripts/generate-docs.mjs` - GraphQL-Markdown configuration and runner
 - `scripts/custom-hugo-mdx.mjs` - Custom formatter with lifecycle hooks
-- `schema.graphql` - Source GraphQL schema
+- [`demo_schema.graphql`](https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql) - Shared GraphQL-Markdown demo schema, loaded from its URL
 - `hugo.toml` - Hugo configuration
 - `static/css/gqlmd-badges.css` - Badge styling
 - `layouts/_partials/docs/inject/head.html` - CSS injection
