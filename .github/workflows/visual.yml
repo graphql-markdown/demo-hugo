@@ -1,0 +1,62 @@
+name: Visual tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  argos:
+    name: Argos screenshots
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3.3.0
+        with:
+          # Pinned: an unannounced Hugo release can break the theme build.
+          hugo-version: "0.170.0"
+          extended: true
+
+      # Hugo 0.170 dropped the embedded LibSass, so the Hugo Book theme's
+      # css.Sass needs the Dart Sass binary on PATH.
+      - name: Install Dart Sass
+        env:
+          DART_SASS_VERSION: "1.108.2"
+        run: |
+          curl -fsSL "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" \
+            | tar xz -C "${RUNNER_TEMP}"
+          echo "${RUNNER_TEMP}/dart-sass" >> "${GITHUB_PATH}"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Build site
+        run: npm run build:visual
+        env:
+          GRAPHQL_MARKDOWN_TELEMETRY_DISABLED: "1"
+
+      - name: Screenshot and upload to Argos
+        run: npm run test:visual
+        env:
+          ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
