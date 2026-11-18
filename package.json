@@ -6,7 +6,9 @@
   "scripts": {
     "generate": "node ./scripts/generate-docs.mjs",
     "dev": "npm run generate && hugo server -D",
-    "build": "npm run generate && hugo"
+    "build": "npm run generate && hugo",
+    "build:visual": "npm run generate && hugo --baseURL /demo-hugo/ -d .site/demo-hugo",
+    "test:visual": "playwright test"
   },
   "dependencies": {
     "@graphql-markdown/cli": "^1.2.2",
@@ -15,5 +17,10 @@
     "@graphql-tools/url-loader": "^10.0.9",
     "glob": "^14.0.5",
     "graphql": "^17.1.0"
+  },
+  "devDependencies": {
+    "@argos-ci/playwright": "^7.10.0",
+    "@playwright/test": "^1.65.1",
+    "serve": "^14.2.8"
   }
 }

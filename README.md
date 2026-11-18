@@ -16,13 +16,24 @@ Inside your GraphQL-Markdown + [Hugo](https://gohugo.io/) project with the [Book
 │       ├── operations/          # Queries, mutations, subscriptions
 │       ├── types/               # Objects, interfaces, inputs, scalars, enums
 │       └── directives/          # GraphQL directives
+├── content/
+│   ├── _index.md                # Landing page front matter
+│   └── about.md                 # About this demo
 ├── static/
 │   ├── css/
-│   │   └── gqlmd-badges.css     # Badge styling
+│   │   └── gqlmd-badges.css     # Reference + landing page styling (light/dark)
+│   ├── js/
+│   │   └── gqlmd.js             # Permalink fix + deprecated badge tagging
 │   └── logo.png                 # GraphQL-Markdown logo
 ├── layouts/
+│   ├── home.html                # Landing page (hero, schema preview, highlights)
 │   └── _partials/docs/inject/
-│       └── head.html            # Inject CSS for badges
+│       └── head.html            # Inject CSS and JS
+├── tests/visual/
+│   └── site.spec.ts             # Playwright + Argos screenshots
+├── playwright.config.ts         # Visual test config (serves .site/)
+├── .github/workflows/
+│   └── visual.yml               # Visual tests workflow
 ├── themes/
 │   └── book/                    # Hugo Book theme (submodule)
 ├── scripts/
@@ -40,6 +51,9 @@ Inside your GraphQL-Markdown + [Hugo](https://gohugo.io/) project with the [Book
 - 🗂️ Section index generation with automatic navigation links
 - ⚖️ Sequential weight assignment for proper sidebar ordering
 - 🔗 Clean URL paths without .md extensions in links
+- 🏠 Custom landing page with a schema preview card
+- 🌗 Hugo-pink-accented light and dark styling for entity chips, badges and callouts
+- 📸 Playwright + Argos visual tests (`npm run build:visual && npm run test:visual`)
 - 📱 Responsive sidebar navigation via Hugo Book theme
 
 ## 🧞 Commands
@@ -52,6 +66,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run generate` | Generate docs from the GraphQL schema |
 | `npm run dev` | Generate docs + serve a local Hugo preview |
 | `npm run build` | Generate docs + build a static site to `public/` |
+| `npm run build:visual` | Generate docs + build to `.site/demo-hugo/` for visual tests |
+| `npm run test:visual` | Run the Playwright/Argos screenshot tests |
 | `npm run clean` | Remove generated files and build output |
 
 ## 🏎️ Quick start
