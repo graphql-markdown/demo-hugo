@@ -1,6 +1,7 @@
 ---
-title: "GraphQL Documentation Demo"
-bookCollapseSection: true
+title: "About this demo"
+type: docs
+weight: 2
 ---
 
 # GraphQL Documentation with Hugo Book
