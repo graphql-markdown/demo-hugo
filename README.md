@@ -52,7 +52,7 @@ Inside your GraphQL-Markdown + [Hugo](https://gohugo.io/) project with the [Book
 - ⚖️ Sequential weight assignment for proper sidebar ordering
 - 🔗 Clean URL paths without .md extensions in links
 - 🏠 Custom landing page with a schema preview card
-- 🌗 Violet-accented light and dark styling for entity chips, badges and callouts
+- 🌗 Hugo-pink-accented light and dark styling for entity chips, badges and callouts
 - 📸 Playwright + Argos visual tests (`npm run build:visual && npm run test:visual`)
 - 📱 Responsive sidebar navigation via Hugo Book theme
 
