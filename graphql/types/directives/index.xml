@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Directives on GraphQL Markdown Demo</title>
+		<title>Directives on GraphQL-Markdown</title>
 		<link>https://graphql-markdown.dev/demo-hugo/graphql/types/directives/</link>
-		<description>Recent content in Directives on GraphQL Markdown Demo</description>
+		<description>Recent content in Directives on GraphQL-Markdown</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		

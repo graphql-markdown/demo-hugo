@@ -1,6 +1,6 @@
 {
-  "name": "GraphQL Markdown Demo",
-  "short_name": "GraphQL Markdown Demo",
+  "name": "GraphQL-Markdown",
+  "short_name": "GraphQL-Markdown",
   "start_url": "/demo-hugo/",
   "scope": "/demo-hugo/",
   "display": "standalone",
