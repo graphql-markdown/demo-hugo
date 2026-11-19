@@ -1,6 +1,6 @@
 baseURL = 'https://graphql-markdown.dev/demo-hugo/'
 locale = 'en-us'
-title = 'GraphQL Markdown Demo'
+title = 'GraphQL-Markdown'
 theme = 'book'
 
 [params]
