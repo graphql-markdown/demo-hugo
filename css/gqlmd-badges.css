@@ -419,3 +419,9 @@ a:has(> .gqlmd-mdx-entity):hover .gqlmd-mdx-entity {
     padding: 2rem 0;
   }
 }
+
+/* ── Sidebar brand ────────────────────────────────────────────────────── */
+
+.book-brand {
+  white-space: nowrap;
+}
