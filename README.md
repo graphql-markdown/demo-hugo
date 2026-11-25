@@ -38,7 +38,10 @@ Inside your GraphQL-Markdown + [Hugo](https://gohugo.io/) project with the [Book
 │   └── book/                    # Hugo Book theme (submodule)
 ├── scripts/
 │   ├── custom-hugo-mdx.mjs      # Custom MDX formatter with lifecycle hooks
+│   ├── generate-copies.mjs      # Markdown copies runner
 │   └── generate-docs.mjs        # GraphQL-Markdown configuration and runner
+├── lib/
+│   └── markdown-copy.mjs        # Markdown copies formatter
 ├── hugo.toml                    # Hugo site configuration
 └── package.json
 ```
@@ -96,6 +99,12 @@ The generation pipeline uses lifecycle hooks for advanced customization:
 4. **formatMDXBadge** - Colors badges based on type (deprecated=red, required=blue, etc.)
 
 The resulting Markdown is fully compatible with Hugo's Markdown processor, and badges render with custom CSS when `unsafe = true` is set in `hugo.toml`.
+
+## 📝 Markdown copies
+
+Each generated page links to a plain Markdown copy of itself ("View as Markdown"). `npm run generate` runs `scripts/generate-copies.mjs` after the docs, with its own formatter in `lib/markdown-copy.mjs`; the build copies `.markdown-copies/` next to the pages in `public/` (and `.site/demo-hugo/` for visual tests). For example, `/graphql/types/objects/project/` has its copy at `/graphql/types/objects/project.md`.
+
+Deprecation reasons also link backticked type names to their pages (for example "Replaced by the `ProjectStatus` enum" links to the enum), through the `beforePrintTypeHook` and `formatMDXAdmonition` overrides in `scripts/custom-hugo-mdx.mjs`.
 
 ## 👀 Want to learn more?
 

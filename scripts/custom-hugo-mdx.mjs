@@ -1,4 +1,4 @@
-import { dirname, resolve, basename } from "node:path";
+import { basename, dirname, relative, resolve, sep } from "node:path";
 
 import {
   fileExists,
@@ -9,11 +9,60 @@ import {
 } from "@graphql-markdown/utils";
 
 import HugoFormatter from "@graphql-markdown/formatters/hugo";
+import { toLink } from "@graphql-markdown/printer-legacy";
 
 // Get the formatter object by calling createMDXFormatter or use the exports directly
 const hugoFormatFunctions = typeof HugoFormatter.createMDXFormatter === 'function' 
   ? HugoFormatter.createMDXFormatter() 
   : HugoFormatter;
+
+// Public URL of the generated pages' folder (site URL + base path + baseURL)
+const COPIES_URL = "https://graphql-markdown.dev/demo-hugo/graphql";
+
+// Pages render concurrently, so this may hold another page's options: only read
+// settings shared by every page (schema, basePath, hierarchy, groups, deprecated, formatMDXLink).
+let printOptions;
+
+/**
+ * Hook that captures the resolved print options before each page is printed.
+ */
+const beforePrintTypeHook = (event) => {
+  printOptions = event.data.options;
+};
+
+/**
+ * Replaces inline code names matching a schema type with a link to its page.
+ */
+const linkEntities = (text) => {
+  const schema = printOptions?.schema;
+  const rootTypes = [
+    schema?.getQueryType(),
+    schema?.getMutationType(),
+    schema?.getSubscriptionType(),
+  ];
+
+  return text.replaceAll(/`([_A-Za-z][_0-9A-Za-z]*)`/g, (match, name) => {
+    const type = schema?.getType(name);
+    if (!type || name.startsWith("__") || rootTypes.includes(type)) {
+      return match;
+    }
+    const { url } = toLink(type, name, undefined, printOptions);
+    return url === "#" ? match : `[\`${name}\`](${url})`;
+  });
+};
+
+/**
+ * Formatter override that links entities in deprecation admonitions, whatever
+ * the title case, so the `@deprecatedType` notices (titled "Deprecated") are
+ * linked too.
+ */
+const formatMDXAdmonition = (admonition, meta) => {
+  const text =
+    admonition.title?.toLowerCase() === "deprecated" && admonition.text
+      ? linkEntities(admonition.text)
+      : admonition.text;
+  return hugoFormatFunctions.formatMDXAdmonition({ ...admonition, text }, meta);
+};
 
 const COLUMNS_OPEN = "{{% columns %}}";
 const COLUMNS_CLOSE = "{{% /columns %}}";
@@ -36,7 +85,7 @@ const queueIndexUpdate = async (indexFilePath, update) => {
  * and adds weight and type properties to the entity file.
  * Executed after rendering each type entity.
  */
-const afterRenderTypeEntitiesHook = async (event) => {
+const hugoAfterRenderTypeEntitiesHook = async (event) => {
   const { filePath, name } = event.data;
   const dirPath = dirname(filePath);
   const indexFilePath = resolve(dirPath, "_index.md");
@@ -116,8 +165,37 @@ const afterRenderTypeEntitiesHook = async (event) => {
   }
 };
 
+/**
+ * Appends a "View as Markdown" link to each page, pointing to its copy.
+ */
+const pageLinkHook = async (event) => {
+  const { filePath, outputDir, outputAdapter } = event.data;
+  const path = relative(outputDir, filePath)
+    .split(sep)
+    .join("/")
+    .replace(/\.mdx?$/, "");
+  const link = `\n\n[View as Markdown](${COPIES_URL}/${path}.md)\n`;
+
+  // Use the output adapter when one is configured, the file system otherwise
+  const page = outputAdapter?.readFile
+    ? await outputAdapter.readFile(filePath)
+    : await readFile(filePath, "utf-8");
+  const content = `${page.trimEnd()}${link}`;
+  await (outputAdapter?.writeFile
+    ? outputAdapter.writeFile(filePath, content)
+    : saveFile(filePath, content));
+};
+
+const afterRenderTypeEntitiesHook = async (event) => {
+  // Keep the Hugo front matter edits, then link the copy
+  await hugoAfterRenderTypeEntitiesHook(event);
+  await pageLinkHook(event);
+};
+
 export default {
   ...hugoFormatFunctions,
+  beforePrintTypeHook,
+  formatMDXAdmonition,
   beforeGenerateIndexMetafileHook: HugoFormatter.beforeGenerateIndexMetafileHook,
   afterRenderTypeEntitiesHook,
 };

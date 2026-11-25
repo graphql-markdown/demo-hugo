@@ -4,16 +4,19 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "generate": "node ./scripts/generate-docs.mjs",
+    "clean": "rm -rf content/graphql .markdown-copies public .site",
+    "generate": "node ./scripts/generate-docs.mjs && node ./scripts/generate-copies.mjs",
     "dev": "npm run generate && hugo server -D",
-    "build": "npm run generate && hugo",
-    "build:visual": "npm run generate && hugo --baseURL /demo-hugo/ -d .site/demo-hugo",
+    "build": "npm run generate && hugo && node -e \"require('node:fs').cpSync('.markdown-copies','public',{recursive:true})\"",
+    "build:visual": "npm run generate && hugo --baseURL /demo-hugo/ -d .site/demo-hugo && node -e \"require('node:fs').cpSync('.markdown-copies','.site/demo-hugo',{recursive:true})\"",
     "test:visual": "playwright test"
   },
   "dependencies": {
-    "@graphql-markdown/cli": "^1.2.2",
-    "@graphql-markdown/formatters": "^1.2.2",
-    "@graphql-markdown/utils": "^1.14.2",
+    "@graphql-markdown/cli": "^1.3.1",
+    "@graphql-markdown/formatters": "^1.3.1",
+    "@graphql-markdown/graphql": "^1.4.1",
+    "@graphql-markdown/printer-legacy": "^1.21.1",
+    "@graphql-markdown/utils": "^1.14.5",
     "@graphql-tools/url-loader": "^10.0.9",
     "glob": "^14.0.6",
     "graphql": "^17.1.0"
