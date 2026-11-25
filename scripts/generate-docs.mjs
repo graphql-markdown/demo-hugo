@@ -2,6 +2,7 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 import { runGraphQLMarkdown } from "@graphql-markdown/cli";
+import { decorators } from "../lib/decorators.mjs";
 
 const customMDX = pathToFileURL(
   resolve("./scripts/custom-hugo-mdx.mjs"),
@@ -21,6 +22,7 @@ await runGraphQLMarkdown(
       UrlLoader: "@graphql-tools/url-loader",
     },
     pretty: true,
+    decorators,
     force: true,
     telemetry: false,
     docOptions: {
