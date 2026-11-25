@@ -59,6 +59,10 @@ jobs:
       - name: Build
         run: hugo
 
+      # Serve each page's Markdown copy at `<page-url>.md`
+      - name: Publish Markdown copies
+        run: node -e "require('node:fs').cpSync('.markdown-copies','public',{recursive:true})"
+
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
